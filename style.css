@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+/* Estilização do conteúdo */
+.sobrecolegio, .aprovados {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.textaprovados{
+    text-align: center;
+}
+
+p {
+    margin-bottom: 10px; /* Faz o espaço entre os parágrafos maior */
+}
+
+/* Estilos do slider */
+.slider {
+    width: 100%;
+    max-width: 600px; 
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    margin: 20px auto;
+}
+
+/* Container das imagens */
+.imagensListas {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Ajuste para que as imagens ocupem 100% da largura do slider */
+.imagensListas img {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
