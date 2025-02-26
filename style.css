@@ -1,120 +1,130 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f4f4f4;
-    text-align: left;
+  background-color: #f4f4f4;
+  text-align: left;
 }
 
 /* Estilização do conteúdo */
-.sobrecolegio, .aprovados {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.sobrecolegio {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white; /* Defina uma cor */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.aprovados {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white; /* Defina uma cor */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: #333;
-    text-align: center;
+h1,
+h2 {
+  color: #333;
+  text-align: center;
 }
 
 .textaprovados {
-    text-align: center;
+  text-align: center;
 }
 
 p {
-    margin-bottom: 10px; /* Faz o espaço entre os parágrafos maior */
+  margin-bottom: 10px; /* Faz o espaço entre os parágrafos maior */
 }
 
 /* Estilos do slider */
 .slider {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-    position: relative;
-    margin: 20px auto;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  margin: 20px auto;
 }
 
 /* Container das imagens */
 .imagensListas {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* Ajuste para que as imagens ocupem 100% da largura do slider */
 .imagensListas img {
-    width: 100%; /* Ajusta a largura automaticamente */
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
+  width: 100%; /* Ajusta a largura automaticamente */
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 header {
-     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-    padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+  padding: 20px;
 }
 
 .container {
-    position: relative;
-    max-width: 940px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px; /* Adiciona um espaçamento interno */
+  position: relative;
+  max-width: 940px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; /* Adiciona um espaçamento interno */
 }
-
 
 nav {
-    position: static; /* Remove o posicionamento absoluto */
+  position: static; /* Remove o posicionamento absoluto */
+  padding: 10px 0;
 }
 nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Adiciona espaçamento entre os itens */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* Adiciona espaçamento entre os itens */
 }
 
 nav li {
-    display: inline;
-    margin: 0 0 0 15px;
+  display: inline;
+  margin: 0 0 0 15px;
 }
 
 nav a {
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
 }
 .logotipo {
-    width: 150px;
-    height: auto;
+  width: 150px;
+  height: auto;
 }
 @media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 0 10px;
-    }
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+  }
 
-    .logotipo {
-        width: 120px;
-    }
+  .logotipo {
+    width: 100px;
+  }
 
-    .slider {
-        max-width: 100%;
-    }
+  .slider {
+    max-width: 100%;
+  }
 }
