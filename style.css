@@ -1,3 +1,12 @@
+:root {
+  --main-color: #007bff;
+  --black: #000000;
+  --bg: #f4f4f4;
+  --border: #e0e0e0;
+  --tamanho-font: 15px;
+  --tamanho-font-title: 22px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,49 +15,145 @@
 }
 
 body {
-  background-color: #f4f4f4;
-  text-align: left;
+  background-color: var(--bg);
 }
 
-/* Estilização do conteúdo */
-.sobrecolegio {
-  max-width: 800px;
-  margin: 20px auto;
+section {
   padding: 20px;
-  background-color: white; /* Defina uma cor */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 1200px;
 }
-.aprovados {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: white; /* Defina uma cor */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+/* Cabeçalho */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: white;
+  border-bottom: 2px solid var(--border);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Centraliza os itens */
+  align-items: center;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center; /* Centraliza a lista */
+  align-items: center;
+  gap: 15px; /* Espaçamento entre os itens */
+  list-style: none;
+  padding: 0;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+/* Seção inicial */
+.home-container {
+  background: var(--main-color);
+  min-height: 60vh;
+  display: flex;
+  align-items: end;
+  color: white;
+  text-align: center;
+}
+
+.content {
+  max-width: 60rem;
 }
 
 h1,
 h2 {
   color: #333;
   text-align: center;
+  font-size: var(--tamanho-font-title);
+}
+
+p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: var(--tamanho-font);
+}
+
+/* Seção Aprovados */
+.aprovados {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .textaprovados {
   text-align: center;
-}
-
-p {
-  margin-bottom: 10px; /* Faz o espaço entre os parágrafos maior */
+  font-size: var(--tamanho-font);
 }
 
 /* Estilos do slider */
 .slider {
   width: 100%;
+  max-width: 100%; /* Adicionando largura máxima para o slider */
   overflow: hidden;
   border-radius: 10px;
   position: relative;
   margin: 20px auto;
+}
+
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.slider button:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /* Container das imagens */
@@ -57,56 +162,15 @@ p {
   transition: transform 0.5s ease-in-out;
 }
 
-/* Ajuste para que as imagens ocupem 100% da largura do slider */
 .imagensListas img {
-  width: 100%; /* Ajusta a largura automaticamente */
+  width: auto;
+  max-width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-  padding: 20px;
-}
-
-.container {
-  position: relative;
-  max-width: 940px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px; /* Adiciona um espaçamento interno */
-}
-
-nav {
-  position: static; /* Remove o posicionamento absoluto */
-  padding: 10px 0;
-}
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px; /* Adiciona espaçamento entre os itens */
-}
-
-nav li {
-  display: inline;
-  margin: 0 0 0 15px;
-}
-
-nav a {
-  text-transform: uppercase;
-  color: #000000;
-  font-weight: bold;
-  font-size: 22px;
-  text-decoration: none;
-}
-.logotipo {
-  width: 150px;
-  height: auto;
-}
+/* Responsividade */
 @media (max-width: 768px) {
   .container {
     width: 100%;
@@ -120,7 +184,12 @@ nav a {
     gap: 5px;
   }
 
-  .logotipo {
+  nav a {
+    font-size: 1.6rem;
+    padding: 5px 0;
+  }
+
+  .logo img {
     width: 100px;
   }
 
